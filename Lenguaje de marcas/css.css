@@ -1,0 +1,51 @@
+/*Cada uno de los estilos que componene una hoja de CSS se denomina regla.
+Cada regla esta formada por : 
+Selector -> Indica elemento o elementos HTML que se aplica CSS
+Llave de apertura -> {
+Declaracion -> Especifica estilos como :
+<span "=""> -> Propiedad 
+<span "=""> -> Valor  
+Llave de cierre -> }
+*/
+
+h1 { color:brown; }
+h2 { color:chocolate; }
+
+/*Para elegir sobre que elemento queremos actuar se utilizan los selectores.
+Podemos usar :
+Selectores universales -> Sirve para todos los elementos de la pagina. Se usa * {}
+Selectores de etiqueta -> Solo para la etiqueta seleccionada. Se usa etiqueta {}
+*/
+
+
+/*Si queremos seleccionar varias etiquetas podemos separarlas por comas. Ejemplo:
+p, h1, h2 {lo que sea}
+*/
+
+
+/*Cuando no quermos dar formato a todas las etiquetas, en HTML pondremos atributo class. Ejemplo:
+<p class="parrafoCentrado"> .... </p>
+y en CSS:
+p.parrafoCentrado {lo que sea;}
+De esa manera se aplicara solo a las etiquetas que tengan esa class
+*/ 
+
+
+/*Selectores ID :
+Permite seleccionar un elemento de la pagina mediante su atributo id.
+El id debe ser unico. Ejemplo : 
+En HTML : <p id="unico"></p>
+En CSS : #unico {lo que sea;}
+*/
+
+/*Selectores descendientes : 
+Permite seleccionar elementos dentro de otros elementos. Por ejemplo : 
+p h1 {lo que sea; }
+En este caso, se aplicara a todas las etiquetas h1 que esten dentro de p.
+Esto no es lo mismo que cuando separamos por comas como arriba p, h1. NO ES LO MISMO.
+Tambien podemos combinar el selector universal p * b {lo que sea; }
+Solo aplica a etiquetas <b> que esten anidadas a otra etiqueta y que a su vez esten dentro de <p>.
+*/
+
+
+/*PROPIEDADES PRINCIPALES DE CSS*/
