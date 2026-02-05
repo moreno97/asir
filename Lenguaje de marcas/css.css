@@ -8,8 +8,10 @@ Declaracion -> Especifica estilos como :
 Llave de cierre -> }
 */
 
+
 h1 { color:brown; }
 h2 { color:chocolate; }
+
 
 /*Para elegir sobre que elemento queremos actuar se utilizan los selectores.
 Podemos usar :
@@ -18,9 +20,11 @@ Selectores de etiqueta -> Solo para la etiqueta seleccionada. Se usa etiqueta {}
 */
 
 
+
 /*Si queremos seleccionar varias etiquetas podemos separarlas por comas. Ejemplo:
 p, h1, h2 {lo que sea}
 */
+
 
 
 /*Cuando no quermos dar formato a todas las etiquetas, en HTML pondremos atributo class. Ejemplo:
@@ -31,12 +35,15 @@ De esa manera se aplicara solo a las etiquetas que tengan esa class
 */ 
 
 
+
 /*Selectores ID :
 Permite seleccionar un elemento de la pagina mediante su atributo id.
 El id debe ser unico. Ejemplo : 
 En HTML : <p id="unico"></p>
 En CSS : #unico {lo que sea;}
 */
+
+
 
 /*Selectores descendientes : 
 Permite seleccionar elementos dentro de otros elementos. Por ejemplo : 
@@ -48,4 +55,98 @@ Solo aplica a etiquetas <b> que esten anidadas a otra etiqueta y que a su vez es
 */
 
 
-/*PROPIEDADES PRINCIPALES DE CSS*/
+
+/*PROPIEDADES PRINCIPALES DE CSS : 
+
+Color  y fondo : 
+color -> Color de texto. Casi todas las etiquetas de HTML vale. El valor es un color, nombre y RGB.
+background-color -> Color de fondo del elemento. El valor es un color, nombre y RGB.
+background-image -> Permite colocar una imagen de fondo del elemento. El valor es el nombre de la img.
+background-repeat -> Indica si ha de repetirse la imagen de fondo y en ese caso si horizontal o vertical. Valores como repeat-x, repeat-y o no-repeat.
+background-attachment -> Si la imagen ha de permanecer fija o realizar un scroll. Valores scroll o fixed.
+background-position -> Permite posicionar una imagen. Valores como porcentaje, tamano o [top, center, bottom] [left, center, rigth]
+background -> Establece en un solo paso cualquiera de las propiedades anteriores. 
+
+Es aconsejable utilizar valor RGB.
+
+
+Fuente:
+font-sice -> Indica tamano de la fuente. Puede ser absoluto, relativo o porcentaje.
+font-family -> Establece una familia a la que pertenece la fuente. 
+font-weight -> Define el grosor de los caracteres. Los valores ; normal, bold, bolder, lighter, 100, 200, 300, 400, 500, 600, 700, 800 o 900. 
+font-style ->Determina si la fuente es cursiva o normal. oblique es cursiva, normal o italic.
+font-variant -> Determina si la fuente es normal o mayuscula pequenas. Valores ; normal o small-caps.
+line-height -> El alto de una linea y el espaciado entre lineas.
+font -> Permite establecer las anteriores por orden ; font-style, font-variant, font-weight, font-size, font family. Los valores han de estar separado por espacios.
+
+
+Texto: 
+text-decoration -> Establece si el texto esta subrayado, sobrerayado o tachado. Valores como none, underline, overline, line-through o blink.
+text-align -> Indica alineacion del texto. Valores como left, right, cener o justify.
+text-indent -> Determina la tabulacion del texto. Valor de longitud o porcentaje. 
+text-trasnsform -> Nos permite trasnformar el texto. Valores como capitalize, uppercase, lowercase o none.
+word-spacing -> Determina el espaciado entre las palabras.  Valor como tamano.
+letter-spacing -> Determinada el espaciado entre las letras. Valor como tamano.
+vertical-align -> Establece la alineacion vertical del texto. Valores como baseline, sub, top, super, text-top, middle, bottom, text-bottom o un porcentaje.
+line-height -> Altura de la linea. Valor como tamano o porcentaje.
+
+
+Lista:
+list-style-type -> Indica simbolo como marcador de las listas. Valores como disc, circle, square, decimal, lower-roman, upper-roman, lower-alpha, upper-alpha o none.
+list-style-image -> Permite utilizar el uso de una imagen como marcador en una lista. El valor es la ruta de la imagen.
+list-style-position -> Determina la posicion del marcador en una lista. Valores como outside o inside.
+list-style -> Permite establecer de una unica vez todas las caracteristicas de una lista. Valores siguen un orden : list-style-type, list-style-position y list-style-image.
+
+
+Display: 
+Esta propiedad se usa para hacer que un elemento sea de bloque o de linea y para ocultar lo hacerlo visible a traves de Javascript.
+*/
+
+
+
+/* MODELO DE CAJAS : 
+(Vamos a explicar de dentro hacia fuera, contenido esta en el centro y el margen
+exterior esta mas alejado. Cada etiqueta es una caja) 
+- Contenido -> Texto de la etiqueta. 
+- Margen interior -> Distancia desde el contenido al borde del elemento. Propiedad HTML padding.
+- Borde -> El borde del elemento. Propiedad HTML border.
+- Margen exterior -> Distancia desde el borde del elemento a los elementos adyacentes. Propiedad de HTML margin. 
+
+En Contenido encontramos : 
+- Anchura -> width. Valor auto o Longitud en pixeles.
+- Altura -> height. Valor auto o Longitud en pixeles. 
+Tanto width como height no tienen en cuenta borde y margenes. 
+
+En Margen interno encontramos : 
+- Relleno/margen interno -> Padding, padding-top, padding-bottom, padding-right, padding-left. Valor auto, longitud o porcentaje.
+Si aplicamos padding con un solo valor se aplicara a los cuatro lados. Podemos solo elegir a que lado queremos.
+
+En Borde encontramos : 
+- Color del borde -> border-color, border-top-color, border-bottom-color, border-right-color, border-left-color.
+- Grueso del borde -> border-width, border-top-width, border-bottom-width, border-right-width, border-left-width. Valor de longitud o thin, medium o thick.
+- Estilo del borde -> border-style, border-top-style, border-bottom-style, border-right-style, border-left-style. Valor como solid, dashed, dotted, double, ridge, groove, inset, outset, hidden, none. 
+Si utilizamos border-color, border-width o border-style con un solo valor se aplica a los cuatro lados. 
+
+En Margen externo encontramos : 
+- Ancho del margen externo -> margin, margin-top, margin-bottom, margin-right, margin-left. Valor auto, longitud o porcentaje. 
+*/
+
+
+
+/*UNIDADES DE TAMANO : 
+- Absolutas -> cm (centimentros), mm (milimetros), ln (pulgadas), px (pixeles), pt (puntos), pc (picas).
+Para fotos y videos se usa px. 
+- Relativos -> em (relativa al tamano del tipo de letra), porcentajes.
+Para estructura web se usa porcentajes o em. 
+*/
+
+
+
+/* POSICIONAMIENTO :
+- Float -> Los elementos flotan hacia la izquierda o derecha. Todos los elementos flotados van situando uno junto a otro.
+Elementos <nav> y <selection>
+*/
+
+/*VALIDADOR CSS : 
+https://jigsaw.w3.org/css-validator/
+*/
